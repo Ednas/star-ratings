@@ -1,3 +1,36 @@
+/* Outside star wrapper container for the star outlines */
+
+.stars-wrapper {
+    display: inline-block;
+    position: relative;
+    color: grey;
+}
+
+
+/* Using CSS pseudo elements as seen here: https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements */
+
+.stars-wrapper::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 100;
+    content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+
+/* This is for the solid stars that go ontop of the star wrapper with the star outlines */
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    color: #f8ce0b;
+}
+
+
+/* This just makes the table look pretty */
+
 table {
     margin: 0 auto;
     text-align: center;
@@ -19,26 +52,4 @@ table td {
 
 table th {
     border-bottom: 1px solid #d4d4d4;
-}
-
-.stars-wrapper {
-    display: inline-block;
-    position: relative;
-    color: grey;
-}
-
-.stars-wrapper::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 100;
-    content: "\f005 \f005 \f005 \f005 \f005";
-}
-
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    color: #f8ce0b;
 }
